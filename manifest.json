@@ -1,0 +1,33 @@
+{
+    "name": "Readability",
+    "description": "Improve the readability of any website.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["style.css"],
+            "js": ["foreground.js"]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "/images/Ry16.png",
+            "32": "/images/Ry32.png",
+            "128": "/images/Ry128.png"
+          }
+    },
+    "icons": {
+        "16": "/images/Ry16.png",
+        "32": "/images/Ry32.png",
+        "128": "/images/Ry128.png"
+    }
+  }
